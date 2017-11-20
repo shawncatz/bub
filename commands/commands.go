@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/github/hub/ui"
+	"github.com/shawncatz/bub/ui"
 	flag "github.com/ogier/pflag"
 )
 

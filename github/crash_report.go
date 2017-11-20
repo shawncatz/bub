@@ -9,10 +9,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/github/hub/git"
-	"github.com/github/hub/ui"
-	"github.com/github/hub/utils"
-	"github.com/github/hub/version"
+	"github.com/shawncatz/bub/git"
+	"github.com/shawncatz/bub/ui"
+	"github.com/shawncatz/bub/utils"
+	"github.com/shawncatz/bub/version"
 )
 
 const (
@@ -89,7 +89,7 @@ const crashReportTmpl = "Crash report - %v\n\n" +
 	`
 # Creating crash report:
 #
-# This information will be posted as a new issue under github/hub.
+# This information will be posted as a new issue under shawncatz/bub.
 # We're NOT including any information about the command that you were executing,
 # but knowing a little bit more about it would really help us to solve this problem.
 # Feel free to modify the title and the description for this issue.

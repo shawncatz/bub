@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/bmizerany/assert"
-	"github.com/github/hub/fixtures"
+	"github.com/shawncatz/bub/fixtures"
 )
 
 var prContent = `Description

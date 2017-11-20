@@ -7,9 +7,9 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/github/hub/cmd"
-	"github.com/github/hub/git"
-	"github.com/github/hub/ui"
+	"github.com/shawncatz/bub/cmd"
+	"github.com/shawncatz/bub/git"
+	"github.com/shawncatz/bub/ui"
 	"github.com/kballard/go-shellquote"
 	flag "github.com/ogier/pflag"
 )

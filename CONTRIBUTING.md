@@ -31,7 +31,7 @@ feature is a good idea for hub if it improves some workflow for a GitHub user.
 ## How to install dependencies and run tests
 
 1. Clone hub:
-    `git clone https://github.com/github/hub.git && cd hub`
+    `git clone https://github.com/shawncatz/bub.git && cd hub`
 2. Verify that existing tests pass:
     `make test-all`
 3. Create a topic branch:
@@ -60,7 +60,7 @@ as a Sinatra app inline in each scenario:
 ```
 Given the GitHub API server:
   """
-  post('/repos/github/hub/pulls') {
+  post('/repos/shawncatz/bub/pulls') {
     status 200
   }
   """

@@ -5,10 +5,10 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/github/hub/git"
-	"github.com/github/hub/github"
-	"github.com/github/hub/ui"
-	"github.com/github/hub/utils"
+	"github.com/shawncatz/bub/git"
+	"github.com/shawncatz/bub/github"
+	"github.com/shawncatz/bub/ui"
+	"github.com/shawncatz/bub/utils"
 )
 
 var cmdCreate = &Command{

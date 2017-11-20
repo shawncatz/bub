@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/bmizerany/assert"
-	"github.com/github/hub/fixtures"
+	"github.com/shawncatz/bub/fixtures"
 )
 
 func TestGitHubRepo_OriginRemote(t *testing.T) {

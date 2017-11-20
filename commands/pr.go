@@ -5,8 +5,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/github/hub/github"
-	"github.com/github/hub/utils"
+	"github.com/shawncatz/bub/github"
+	"github.com/shawncatz/bub/utils"
 )
 
 var (

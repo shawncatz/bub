@@ -2,7 +2,7 @@
 
 package github
 
-import "github.com/github/hub/cmd"
+import "github.com/shawncatz/bub/cmd"
 
 // This does nothing on windows
 func setConsole(cmd *cmd.Cmd) {

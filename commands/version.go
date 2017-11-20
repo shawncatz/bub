@@ -1,9 +1,9 @@
 package commands
 
 import (
-	"github.com/github/hub/ui"
-	"github.com/github/hub/utils"
-	"github.com/github/hub/version"
+	"github.com/shawncatz/bub/ui"
+	"github.com/shawncatz/bub/utils"
+	"github.com/shawncatz/bub/version"
 )
 
 var cmdVersion = &Command{

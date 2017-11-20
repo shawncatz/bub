@@ -58,7 +58,7 @@ hub version 2.2.9
 #### Standalone
 
 `hub` can be easily installed as an executable. Download the latest
-[compiled binaries](https://github.com/github/hub/releases) and put it anywhere
+[compiled binaries](https://github.com/shawncatz/bub/releases) and put it anywhere
 in your executable path.
 
 #### Source
@@ -66,7 +66,7 @@ in your executable path.
 To install hub from source:
 
 ``` sh
-$ git clone https://github.com/github/hub.git
+$ git clone https://github.com/shawncatz/bub.git
 $ cd hub
 $ make install prefix=/usr/local
 ```
@@ -91,7 +91,7 @@ is already in your PATH, this is an alternative installation method that fetches
 hub into your GOPATH and builds it automatically:
 
 ``` sh
-$ go get github.com/github/hub
+$ go get github.com/shawncatz/bub
 ```
 
 Aliasing
@@ -140,13 +140,13 @@ complement existing completion scripts that ship with git.
 
 [Installation instructions](etc)
 
-* [hub bash completion](https://github.com/github/hub/blob/master/etc/hub.bash_completion.sh)
-* [hub zsh completion](https://github.com/github/hub/blob/master/etc/hub.zsh_completion)
-* [hub fish completion](https://github.com/github/hub/blob/master/etc/hub.fish_completion)
+* [hub bash completion](https://github.com/shawncatz/bub/blob/master/etc/hub.bash_completion.sh)
+* [hub zsh completion](https://github.com/shawncatz/bub/blob/master/etc/hub.zsh_completion)
+* [hub fish completion](https://github.com/shawncatz/bub/blob/master/etc/hub.fish_completion)
 
 Meta
 ----
 
-* Home: <https://github.com/github/hub>
-* Bugs: <https://github.com/github/hub/issues>
-* Authors: <https://github.com/github/hub/contributors>
+* Home: <https://github.com/shawncatz/bub>
+* Bugs: <https://github.com/shawncatz/bub/issues>
+* Authors: <https://github.com/shawncatz/bub/contributors>

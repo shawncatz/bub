@@ -3,9 +3,9 @@ package commands
 import (
 	"fmt"
 
-	"github.com/github/hub/github"
-	"github.com/github/hub/ui"
-	"github.com/github/hub/utils"
+	"github.com/shawncatz/bub/github"
+	"github.com/shawncatz/bub/ui"
+	"github.com/shawncatz/bub/utils"
 )
 
 var cmdFork = &Command{

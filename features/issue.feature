@@ -1,12 +1,12 @@
 Feature: hub issue
   Background:
-    Given I am in "git://github.com/github/hub.git" git repo
+    Given I am in "git://github.com/shawncatz/bub.git" git repo
     And I am "cornwe19" on github.com with OAuth token "OTOKEN"
 
   Scenario: Fetch issues
     Given the GitHub API server:
     """
-    get('/repos/github/hub/issues') {
+    get('/repos/shawncatz/bub/issues') {
       assert :assignee => "Cornwe19",
              :sort => nil,
              :direction => nil
@@ -41,7 +41,7 @@ Feature: hub issue
   Scenario: Fetch issues and pull requests
     Given the GitHub API server:
     """
-    get('/repos/github/hub/issues') {
+    get('/repos/shawncatz/bub/issues') {
       assert :assignee => "Cornwe19",
              :sort => nil,
              :direction => nil
@@ -77,7 +77,7 @@ Feature: hub issue
   Scenario: Fetch issues not assigned to any milestone
     Given the GitHub API server:
     """
-    get('/repos/github/hub/issues') {
+    get('/repos/shawncatz/bub/issues') {
       assert :milestone => "none"
       json []
     }
@@ -87,7 +87,7 @@ Feature: hub issue
   Scenario: Fetch issues created by a given user
     Given the GitHub API server:
     """
-    get('/repos/github/hub/issues') {
+    get('/repos/shawncatz/bub/issues') {
       assert :creator => "octocat"
       json []
     }
@@ -97,7 +97,7 @@ Feature: hub issue
   Scenario: Fetch issues mentioning a given user
     Given the GitHub API server:
     """
-    get('/repos/github/hub/issues') {
+    get('/repos/shawncatz/bub/issues') {
       assert :mentioned => "octocat"
       json []
     }
@@ -107,7 +107,7 @@ Feature: hub issue
   Scenario: Fetch issues with certain labels
     Given the GitHub API server:
     """
-    get('/repos/github/hub/issues') {
+    get('/repos/shawncatz/bub/issues') {
       assert :labels => "foo,bar"
       json []
     }
@@ -117,7 +117,7 @@ Feature: hub issue
   Scenario: Fetch issues updated after a certain date and time
     Given the GitHub API server:
     """
-    get('/repos/github/hub/issues') {
+    get('/repos/shawncatz/bub/issues') {
       assert :since => "2016-08-18T09:11:32Z"
       json []
     }
@@ -127,7 +127,7 @@ Feature: hub issue
   Scenario: Fetch issues sorted by number of comments ascending
     Given the GitHub API server:
     """
-    get('/repos/github/hub/issues') {
+    get('/repos/shawncatz/bub/issues') {
       assert :sort => "comments"
       assert :direction => "asc"
 
@@ -139,7 +139,7 @@ Feature: hub issue
   Scenario: Fetch issues across multiple pages
     Given the GitHub API server:
     """
-    get('/repos/github/hub/issues') {
+    get('/repos/shawncatz/bub/issues') {
       assert :per_page => "100", :page => :no
       response.headers["Link"] = %(<https://api.github.com/repositories/12345?per_page=100&page=2>; rel="next")
       json [
@@ -192,7 +192,7 @@ Feature: hub issue
   Scenario: Custom format for issues list
     Given the GitHub API server:
     """
-    get('/repos/github/hub/issues') {
+    get('/repos/shawncatz/bub/issues') {
       assert :assignee => 'Cornwe19'
       json [
         { :number => 102,
@@ -218,7 +218,7 @@ Feature: hub issue
   Scenario: List all assignees
     Given the GitHub API server:
     """
-    get('/repos/github/hub/issues') {
+    get('/repos/shawncatz/bub/issues') {
       json [
         { :number => 102,
           :title => "First issue",
@@ -250,25 +250,25 @@ Feature: hub issue
   Scenario: Create an issue
     Given the GitHub API server:
       """
-      post('/repos/github/hub/issues') {
+      post('/repos/shawncatz/bub/issues') {
         assert :title => "Not workie, pls fix",
                :body => "",
                :labels => :no
 
         status 201
-        json :html_url => "https://github.com/github/hub/issues/1337"
+        json :html_url => "https://github.com/shawncatz/bub/issues/1337"
       }
       """
     When I successfully run `hub issue create -m "Not workie, pls fix"`
     Then the output should contain exactly:
       """
-      https://github.com/github/hub/issues/1337\n
+      https://github.com/shawncatz/bub/issues/1337\n
       """
 
   Scenario: Create an issue and open in browser
     Given the GitHub API server:
       """
-      post('/repos/github/hub/issues') {
+      post('/repos/shawncatz/bub/issues') {
         status 201
         json :html_url => "the://url"
       }
@@ -280,7 +280,7 @@ Feature: hub issue
   Scenario: Create an issue with labels
     Given the GitHub API server:
       """
-      post('/repos/github/hub/issues') {
+      post('/repos/shawncatz/bub/issues') {
         assert :title => "hello",
                :body => "",
                :milestone => :no,
@@ -288,19 +288,19 @@ Feature: hub issue
                :labels => ["wont fix", "docs", "nope"]
 
         status 201
-        json :html_url => "https://github.com/github/hub/issues/1337"
+        json :html_url => "https://github.com/shawncatz/bub/issues/1337"
       }
       """
     When I successfully run `hub issue create -m "hello" -l "wont fix,docs" -lnope`
     Then the output should contain exactly:
       """
-      https://github.com/github/hub/issues/1337\n
+      https://github.com/shawncatz/bub/issues/1337\n
       """
 
   Scenario: Create an issue with milestone and assignees
     Given the GitHub API server:
       """
-      post('/repos/github/hub/issues') {
+      post('/repos/shawncatz/bub/issues') {
         assert :title => "hello",
                :body => "",
                :milestone => 12,
@@ -308,13 +308,13 @@ Feature: hub issue
                :labels => :no
 
         status 201
-        json :html_url => "https://github.com/github/hub/issues/1337"
+        json :html_url => "https://github.com/shawncatz/bub/issues/1337"
       }
       """
     When I successfully run `hub issue create -m "hello" -M 12 -a mislav,josh -apcorpet`
     Then the output should contain exactly:
       """
-      https://github.com/github/hub/issues/1337\n
+      https://github.com/shawncatz/bub/issues/1337\n
       """
 
   Scenario: Issue template
@@ -329,18 +329,18 @@ Feature: hub issue
       """
     Given the GitHub API server:
       """
-      post('/repos/github/hub/issues') {
+      post('/repos/shawncatz/bub/issues') {
         assert :title => "hello",
                :body => "my nice issue template"
 
         status 201
-        json :html_url => "https://github.com/github/hub/issues/1337"
+        json :html_url => "https://github.com/shawncatz/bub/issues/1337"
       }
       """
     When I successfully run `hub issue create`
     Then the output should contain exactly:
       """
-      https://github.com/github/hub/issues/1337\n
+      https://github.com/shawncatz/bub/issues/1337\n
       """
 
   Scenario: Issue template from a subdirectory
@@ -355,12 +355,12 @@ Feature: hub issue
       """
     Given the GitHub API server:
       """
-      post('/repos/github/hub/issues') {
+      post('/repos/shawncatz/bub/issues') {
         assert :title => "hello",
                :body => "my nice issue template"
 
         status 201
-        json :html_url => "https://github.com/github/hub/issues/1337"
+        json :html_url => "https://github.com/shawncatz/bub/issues/1337"
       }
       """
     Given a directory named "subdir"
@@ -368,7 +368,7 @@ Feature: hub issue
     And I successfully run `hub issue create`
     Then the output should contain exactly:
       """
-      https://github.com/github/hub/issues/1337\n
+      https://github.com/shawncatz/bub/issues/1337\n
       """
 
   Scenario: A file named ".github"
@@ -383,16 +383,16 @@ Feature: hub issue
       """
     Given the GitHub API server:
       """
-      post('/repos/github/hub/issues') {
+      post('/repos/shawncatz/bub/issues') {
         assert :title => "hello",
                :body => ""
 
         status 201
-        json :html_url => "https://github.com/github/hub/issues/1337"
+        json :html_url => "https://github.com/shawncatz/bub/issues/1337"
       }
       """
     When I successfully run `hub issue create`
     Then the output should contain exactly:
       """
-      https://github.com/github/hub/issues/1337\n
+      https://github.com/shawncatz/bub/issues/1337\n
       """

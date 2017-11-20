@@ -5,9 +5,9 @@ package main
 import (
 	"os"
 
-	"github.com/github/hub/commands"
-	"github.com/github/hub/github"
-	"github.com/github/hub/ui"
+	"github.com/shawncatz/bub/commands"
+	"github.com/shawncatz/bub/github"
+	"github.com/shawncatz/bub/ui"
 )
 
 func main() {

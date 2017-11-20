@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/bmizerany/assert"
-	"github.com/github/hub/github"
+	"github.com/shawncatz/bub/github"
 )
 
 func setupInitContext() {

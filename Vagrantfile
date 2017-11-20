@@ -61,7 +61,7 @@ end
 Vagrant.configure("2") do |config|
   config.vm.define "linux" do |linux|
     linux.vm.box = "ubuntu/trusty64"
-    linux.vm.synced_folder "#{src_path}/src/github.com/github/hub", "/home/vagrant/gocode/src/github.com/github/hub"
+    linux.vm.synced_folder "#{src_path}/src/github.com/shawncatz/bub", "/home/vagrant/gocode/src/github.com/shawncatz/bub"
     linux.vm.provision :shell, :inline => bootstrap("linux")
   end
 end

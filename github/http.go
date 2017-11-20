@@ -14,8 +14,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/github/hub/ui"
-	"github.com/github/hub/utils"
+	"github.com/shawncatz/bub/ui"
+	"github.com/shawncatz/bub/utils"
 )
 
 const apiPayloadVersion = "application/vnd.github.v3+json;charset=utf-8"

@@ -7,9 +7,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/github/hub/cmd"
-	"github.com/github/hub/ui"
-	"github.com/github/hub/utils"
+	"github.com/shawncatz/bub/cmd"
+	"github.com/shawncatz/bub/ui"
+	"github.com/shawncatz/bub/utils"
 )
 
 var cmdHelp = &Command{

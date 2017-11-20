@@ -3,7 +3,7 @@ package version
 import (
 	"fmt"
 
-	"github.com/github/hub/git"
+	"github.com/shawncatz/bub/git"
 )
 
 var Version = "2.3.0-pre10"

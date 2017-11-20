@@ -11,8 +11,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/github/hub/cmd"
-	"github.com/github/hub/git"
+	"github.com/shawncatz/bub/cmd"
+	"github.com/shawncatz/bub/git"
 )
 
 func NewEditor(filePrefix, topic, message string) (editor *Editor, err error) {

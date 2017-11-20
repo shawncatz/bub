@@ -34,9 +34,9 @@ TEXT_WIDTH = 87
 
 .PHONY: clean test test-all man-pages fmt install
 
-all: bin/hub
+all: bin/bub
 
-bin/hub: $(SOURCES)
+bin/bub: $(SOURCES)
 	script/build -o $@
 
 test:

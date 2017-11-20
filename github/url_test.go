@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/bmizerany/assert"
-	"github.com/github/hub/fixtures"
+	"github.com/shawncatz/bub/fixtures"
 )
 
 func TestParseURL(t *testing.T) {

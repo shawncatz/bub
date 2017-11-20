@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"syscall"
 
-	"github.com/github/hub/ui"
-	"github.com/github/hub/utils"
+	"github.com/shawncatz/bub/ui"
+	"github.com/shawncatz/bub/utils"
 	"github.com/mitchellh/go-homedir"
 	"golang.org/x/crypto/ssh/terminal"
 )

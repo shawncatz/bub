@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/github/hub/git"
+	"github.com/shawncatz/bub/git"
 )
 
 type Branch struct {

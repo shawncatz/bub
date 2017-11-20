@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/github/hub/ui"
+	"github.com/shawncatz/bub/ui"
 )
 
 func Check(err error) {

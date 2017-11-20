@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/github/hub/cmd"
+	"github.com/shawncatz/bub/cmd"
 )
 
 var pwd, home string

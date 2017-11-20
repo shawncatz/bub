@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/github/hub/version"
+	"github.com/shawncatz/bub/version"
 	"github.com/octokit/go-octokit/octokit"
 )
 
